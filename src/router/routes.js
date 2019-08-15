@@ -31,7 +31,8 @@ export default [
         path: "highcharts",
         name: "highcharts",
         meta: {
-          label: "Highcharts库的图表"
+          label: "Highcharts库的图表",
+          icon: "Charts"
         },
         component: () => import("../views/charts/Highcharts.vue")
       },
@@ -39,7 +40,8 @@ export default [
         path: "cytoscape",
         name: "cytoscape",
         meta: {
-          label: "Cytoscape绘制的图表"
+          label: "Cytoscape绘制的图表",
+          icon: "Charts"
         },
         component: () => import("../views/charts/Cytoscape.vue")
       }
@@ -84,6 +86,65 @@ export default [
         component: () => import("../views/excel/upload-excel.vue")
       }
     ]
+  },
+  {
+    path: "components",
+    name: "components",
+    meta: {
+      label: "组件",
+      icon: "wenjian"
+    },
+    component: () => import("../views/components/index.vue"),
+    children: [
+      {
+        path: "codePreview",
+        name: "codePreview",
+        meta: {
+          label: "代码预览",
+          icon: "code"
+        },
+        component: () => import("../views/components/codePreview.vue")
+      },
+      {
+        path: "countTo",
+        name: "countTo",
+        meta: {
+          label: "数字",
+          icon: "jiesuanguanli"
+        },
+        component: () => import("../views/components/countTo.vue")
+      }
+    ]
+  },
+  {
+    path: "table",
+    name: "table",
+    meta: {
+      label: "表格",
+      icon: "table"
+    },
+    component: () => import("../views/table/index.vue"),
+    children: [
+      {
+        path: "simple",
+        name: "simple",
+        meta: {
+          label: "简单表格",
+          icon: "table"
+        },
+        component: () => import("../views/table/simple.vue")
+      }
+    ]
+  },
+  {
+    path: "css",
+    name: "css",
+    meta: {
+      label: "CSS",
+      icon: "wenjian"
+    },
+    component: () => import("../views/css/index.vue"),
+    children: []
   },
   {
     path: "*",
