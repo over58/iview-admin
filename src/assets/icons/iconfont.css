@@ -1,0 +1,65 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1565863422635'); /* IE9 */
+  src: url('iconfont.eot?t=1565863422635#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,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') format('woff2'),
+  url('iconfont.woff?t=1565863422635') format('woff'),
+  url('iconfont.ttf?t=1565863422635') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1565863422635#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-linechart:before {
+  content: "\eb36";
+}
+
+.icon-upload:before {
+  content: "\e62e";
+}
+
+.icon-wenjian:before {
+  content: "\e648";
+}
+
+.icon-record:before {
+  content: "\e657";
+}
+
+.icon-19guanyuruanjian:before {
+  content: "\e616";
+}
+
+.icon-export:before {
+  content: "\e722";
+}
+
+.icon-piechart:before {
+  content: "\e78e";
+}
+
+.icon-icon-test:before {
+  content: "\e603";
+}
+
+.icon-image:before {
+  content: "\e6fc";
+}
+
+.icon-excel:before {
+  content: "\e63e";
+}
+
+.icon-home:before {
+  content: "\e6ea";
+}
+
+.icon-Charts:before {
+  content: "\e755";
+}
+
