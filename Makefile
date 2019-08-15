@@ -3,6 +3,7 @@ Port := 8083
 Repos :=  iview-admin
 restart:
 	git pull origin master
+	cnpm install
 	cnpm run build
 	docker rm -f ${Repos}
 	docker rmi ${Repos}:latest
