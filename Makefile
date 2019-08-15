@@ -1,6 +1,6 @@
 # 变量定义
-Port := 3000
-Repos :=  vue-charts
+Port := 8083
+Repos :=  iview-admin
 restart:
 	git pull origin master
 	cnpm run build
