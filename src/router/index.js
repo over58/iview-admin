@@ -16,13 +16,27 @@ let router = new Router({
       name: "main",
       component: Main,
       redirect: "/login",
-      children: [...routes]
+      children: routes
     },
     {
       path: "/login",
       name: "login",
       component: () => import("../views/Login")
+    },
+    {
+      path: "/logout",
+      name: "logout",
+      component: () => import("../views/Logout")
     }
+    // {
+    //   path: "*",
+    //   name: "404",
+    //   meta: {
+    //     label: "404",
+    //     icon: "icon-test"
+    //   },
+    //   component: () => import("../views/404.vue")
+    // }
   ]
 });
 beforeRouter(router);

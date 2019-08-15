@@ -9,15 +9,6 @@ export default [
     component: () => import("../views/Home")
   },
   {
-    path: "record",
-    name: "record",
-    meta: {
-      label: "关于",
-      icon: "record"
-    },
-    component: () => import("../views/Record")
-  },
-  {
     path: "charts",
     name: "charts",
     meta: {
@@ -145,6 +136,15 @@ export default [
     },
     component: () => import("../views/css/index.vue"),
     children: []
+  },
+  {
+    path: "record",
+    name: "record",
+    meta: {
+      label: "记录",
+      icon: "record"
+    },
+    component: () => import("../views/Record")
   },
   {
     path: "*",

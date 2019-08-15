@@ -1,9 +1,12 @@
-import localStore from "store";
+import store from "store";
 export default {
   setToken(val) {
-    localStore.set("token", val);
+    store.set("token", val);
   },
   rmToken() {
-    localStore.remove("token");
+    store.remove("token");
+  },
+  getToken() {
+    return store.get("token");
   }
 };

@@ -13,6 +13,17 @@ export default function(router) {
       });
       return;
     }
-    next();
+    let token = localStore.getToken();
+    if (token) {
+      next();
+    } else {
+      if (["login", "logout", "404"].includes(to.name)) {
+        next();
+      } else {
+        next({
+          name: "login"
+        });
+      }
+    }
   });
 }
