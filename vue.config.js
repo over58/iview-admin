@@ -10,7 +10,7 @@ module.exports = {
   lintOnSave: true,
   productionSourceMap: false,
   css: {
-	sourceMap: false,
+    sourceMap: false
   },
   chainWebpack: config => {
     // 设置目录快捷方式
@@ -25,7 +25,7 @@ module.exports = {
   },
   configureWebpack: {
     devtool:
-      process.env.NODE_ENV === "production" ? "check-source-map" : "none",
+      process.env.NODE_ENV === "production" ? "none" : "cheap-source-map",
     module: {
       rules: [
         {

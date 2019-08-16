@@ -26,12 +26,14 @@ import Highcharts from "highcharts";
 import HighchartsNoData from "highcharts/modules/no-data-to-display";
 import HighchartsExporting from "highcharts/modules/exporting";
 import mockData from "./mock.js";
+import resizeMixin from "mixins/resize";
 
 HighchartsNoData(Highcharts);
 HighchartsExporting(Highcharts);
 
 export default {
   name: "ChartItem",
+  mixins: [resizeMixin],
   props: {
     simple: {
       type: Boolean,
@@ -72,14 +74,10 @@ export default {
   },
   data() {
     return {
-      chartInstance: null,
       mockData: mockData
     };
   },
   computed: {
-    // resize () {
-    //   return this.$store.state.common.resize
-    // },
     option() {
       return {
         chart: {
@@ -175,10 +173,6 @@ export default {
   mounted() {
     this.init();
   },
-  beforeDestroy() {
-    this.chartInstance && this.chartInstance.destroy();
-    this.chartInstance = null;
-  },
   methods: {
     init() {
       Highcharts.setOptions({
@@ -235,7 +229,7 @@ export default {
           }
         });
       }
-      Highcharts.chart(this.$refs.chart, option);
+      this.chartInstance = Highcharts.chart(this.$refs.chart, option);
     }
   }
 };

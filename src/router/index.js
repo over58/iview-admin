@@ -12,13 +12,6 @@ let router = new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: "/",
-      name: "main",
-      component: Main,
-      redirect: "/login",
-      children: routes
-    },
-    {
       path: "/login",
       name: "login",
       component: () => import("../views/Login")
@@ -27,6 +20,13 @@ let router = new Router({
       path: "/logout",
       name: "logout",
       component: () => import("../views/Logout")
+    },
+    {
+      path: "/",
+      name: "main",
+      component: Main,
+      redirect: "/login",
+      children: routes
     }
     // {
     //   path: "*",

@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <Row>
-      <Col :span="18">
+      <Col :sm="18" :xs="24">
         <div id="cy" />
       </Col>
-      <Col :span="6">
+      <Col :sm="6" :xs="24">
         <Card title="节点信息">
           <Form :model="node" :label-width="80">
             <Form-Item label="节点Id">

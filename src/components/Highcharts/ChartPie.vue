@@ -131,6 +131,9 @@ export default {
     this.chartInstance = null;
   },
   methods: {
+    resize() {
+      this.chartInstance && this.chartInstance.reflow();
+    },
     init() {
       Highcharts.setOptions({
         global: {
