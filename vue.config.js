@@ -16,9 +16,12 @@ module.exports = {
       .set("styles", resolve("src/styles"))
       .set("views", resolve("src/views"))
       .set("libs", resolve("src/libs"))
-      .set("api", resolve("src/api"));
+      .set("api", resolve("src/api"))
+      .set("mixins", resolve("src/mixins"));
   },
   configureWebpack: {
+    devtool:
+      process.env.NODE_ENV === "production" ? "check-source-map" : "none",
     module: {
       rules: [
         {

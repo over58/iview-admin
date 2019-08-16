@@ -21,7 +21,6 @@ export default {};
   }
 }
 .wrapper {
-  text-align: center;
   font-size: 30px;
   text-align: center;
   font-style: italic;

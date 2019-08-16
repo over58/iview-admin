@@ -7,6 +7,7 @@
         collapsible
         :collapsed-width="50"
         :value="isCollapsed"
+        class="sider"
       >
         <Menu
           :active-name="activeName"
@@ -28,6 +29,7 @@
                   v-if="isCollapsed"
                   :content="item.meta.label"
                   placement="right-start"
+                  transfer
                 >
                   <i :class="['iconfont', `icon-${item.meta.icon}`]" />
                 </Tooltip>
@@ -44,6 +46,7 @@
                   v-if="isCollapsed"
                   :content="second.meta.label"
                   placement="right-start"
+                  transfer
                 >
                   <i :class="['iconfont', `icon-${second.meta.icon}`]" />
                 </Tooltip>
@@ -56,6 +59,7 @@
                 v-if="isCollapsed"
                 :content="item.meta.label"
                 placement="right-start"
+                transfer
               >
                 <i :class="['iconfont', `icon-${item.meta.icon}`]" />
               </Tooltip>
@@ -84,6 +88,7 @@
 </template>
 
 <script>
+import _ from "lodash";
 import History from "./history";
 import Head from "./head";
 import menus from "@/router/routes";
@@ -118,6 +123,12 @@ export default {
                   item.children.find(x => x.name === this.activeName))
             )
             .map(x => x.name);
+    },
+    throttleResize() {
+      return _.throttle(this.handleResize, 400, {
+        leading: true,
+        trailing: true
+      });
     }
   },
   watch: {
@@ -135,7 +146,24 @@ export default {
     // },
     selectMenu(name) {
       this.$router.push({ name });
+    },
+    handleResize() {
+      if (window.innerWidth < 1000) {
+        this.$store.commit("setCollapsed", true);
+      } else {
+        this.$store.commit("setCollapsed", false);
+      }
     }
+  },
+  created() {
+    window.addEventListener(
+      "resize",
+      () => {
+        this.throttleResize();
+      },
+      false
+    );
+    this.handleResize();
   }
 };
 </script>
@@ -156,6 +184,12 @@ export default {
   background: #5b6270;
   border-radius: 3px;
   margin: 15px auto;
+}
+.sider {
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 }
 .menu-icon {
   transition: all 0.3s;

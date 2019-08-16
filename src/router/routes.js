@@ -63,7 +63,7 @@ export default [
     name: "excel",
     meta: {
       label: "Excel",
-      icon: "wenjian"
+      icon: "excel"
     },
     component: () => import("../views/excel/index.vue"),
     children: [
@@ -72,7 +72,7 @@ export default [
         name: "uploadExcel",
         meta: {
           label: "上传Excel",
-          icon: "image"
+          icon: "upload"
         },
         component: () => import("../views/excel/upload-excel.vue")
       }
@@ -83,7 +83,7 @@ export default [
     name: "components",
     meta: {
       label: "组件",
-      icon: "wenjian"
+      icon: "component"
     },
     component: () => import("../views/components/index.vue"),
     children: [
@@ -132,7 +132,7 @@ export default [
     name: "css",
     meta: {
       label: "CSS",
-      icon: "wenjian"
+      icon: "css"
     },
     component: () => import("../views/css/index.vue"),
     children: []

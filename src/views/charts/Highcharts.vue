@@ -45,12 +45,14 @@
 </template>
 
 <script>
+import resizeMixin from "mixins/resize";
 import mockData from "@/components/Highcharts/mock.js";
 import ChartLine from "@/components/Highcharts/ChartLine";
 import ChartPie from "@/components/Highcharts/ChartPie";
 
 export default {
   name: "Chart",
+  mixins: [resizeMixin],
   components: {
     ChartLine,
     ChartPie
