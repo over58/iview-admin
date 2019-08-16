@@ -1,7 +1,7 @@
 <template>
   <div>
     <Row :gutter="14">
-      <i-col span="3">
+      <i-col :sm="3" :xs="24">
         <Card>
           <p slot="title">
             <Icon type="waterdrop"></Icon>
@@ -19,7 +19,7 @@
           </Row>
         </Card>
       </i-col>
-      <i-col span="5" class="padding-left-10">
+      <i-col :sm="5" :xs="24" class="padding-left-10">
         <Card>
           <p slot="title">
             <Icon type="code"></Icon>
@@ -40,7 +40,7 @@
           </Row>
         </Card>
       </i-col>
-      <i-col span="8" class="padding-left-10">
+      <i-col :sm="8" :xs="24" class="padding-left-10">
         <Card>
           <p slot="title">
             <Icon type="paintbucket"></Icon>
@@ -65,7 +65,7 @@
           </Row>
         </Card>
       </i-col>
-      <i-col span="8" class="padding-left-10">
+      <i-col :sm="8" :xs="24" class="padding-left-10">
         <Card>
           <p slot="title">
             <Icon type="settings"></Icon>
@@ -93,7 +93,7 @@
       </i-col>
     </Row>
     <Row :gutter="14" style="margin-top: 14px;">
-      <i-col span="8">
+      <i-col :sm="8" :xs="24">
         <Card>
           <p slot="title">
             <Icon type="ios-color-wand"></Icon>
@@ -119,7 +119,7 @@
           </Row>
         </Card>
       </i-col>
-      <i-col span="8" class="padding-left-10">
+      <i-col :sm="8" :xs="24" class="padding-left-10">
         <Card>
           <p slot="title">
             <Icon type="ios-shuffle-strong"></Icon>
@@ -169,7 +169,7 @@
           </Row>
         </Card>
       </i-col>
-      <i-col span="8" class="padding-left-10">
+      <i-col :sm="8" :xs="24" class="padding-left-10">
         <Card>
           <p slot="title">
             <Icon type="android-stopwatch"></Icon>
