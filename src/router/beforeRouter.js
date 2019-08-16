@@ -15,7 +15,6 @@ export default function(router) {
     }
     let token = localStore.getToken();
     if (token) {
-      console.log(to);
       next();
     } else {
       if (["login", "logout", "404"].includes(to.name)) {
