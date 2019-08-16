@@ -8,6 +8,10 @@ const publicPath = process.env.NODE_ENV === "production" ? "/" : "/";
 module.exports = {
   publicPath: publicPath,
   lintOnSave: true,
+  productionSourceMap: false,
+  css: {
+	sourceMap: false,
+  },
   chainWebpack: config => {
     // 设置目录快捷方式
     config.resolve.alias
