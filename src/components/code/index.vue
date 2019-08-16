@@ -1,10 +1,10 @@
 <template>
   <div>
     <Row class="container">
-      <Col span="12" class="preview">
+      <Col :sm="12" :xs="24" class="preview">
         <slot></slot>
       </Col>
-      <Col span="12" class="code">
+      <Col :sm="12" :xs="24" class="code">
         <Icon
           :type="full ? 'md-contract' : 'md-expand'"
           class="toggle"
