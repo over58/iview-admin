@@ -1,5 +1,7 @@
 <template>
-  <pre class="editor-json">{{ innerData }}</pre>
+  <pre class="editor-json" :style="{ maxHeight: maxHeight + 'px' }">
+    {{ innerData }}
+  </pre>
 </template>
 
 <script>
@@ -10,7 +12,8 @@ export default {
       default: () => {
         return {};
       }
-    }
+    },
+    maxHeight: Number
   },
   computed: {
     innerData() {
@@ -26,5 +29,6 @@ export default {
   color: #fff;
   padding: 5px;
   border-radius: 5px;
+  overflow: auto;
 }
 </style>

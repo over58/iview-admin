@@ -110,9 +110,18 @@ export default [
         name: "json",
         meta: {
           label: "JSON",
-          icon: "jiesuanguanli"
+          icon: "jsongeshihua"
         },
         component: () => import("../views/components/editorJson.vue")
+      },
+      {
+        path: "svg",
+        name: "svg",
+        meta: {
+          label: "SVG",
+          icon: "SVG"
+        },
+        component: () => import("../views/components/svg.vue")
       }
     ]
   },
@@ -142,6 +151,15 @@ export default [
           icon: "table"
         },
         component: () => import("../views/table/end-page-table.vue")
+      },
+      {
+        path: "frontPage",
+        name: "frontPage",
+        meta: {
+          label: "前端分页表格",
+          icon: "table"
+        },
+        component: () => import("../views/table/front-page-table.vue")
       }
     ]
   },

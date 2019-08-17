@@ -1,6 +1,7 @@
 <template>
   <div>
     <div style="text-align:right">
+      <Button @click="exportCsv">导出</Button>
       <Poptip transfer trigger="click" placement="bottom-end">
         <Button>自定义列</Button>
         <div slot="content" style="max-height: 200px;overflow:auto">
@@ -12,7 +13,7 @@
               v-for="item in columns"
               :key="item.key"
               :label="item.key"
-              style="display: block;"
+              :style="{ display: item.type ? 'none' : 'block' }"
               :disabled="
                 showColumnsKeys.indexOf(item.key) > -1 &&
                   showColumnsKeys.length <= 1
@@ -26,6 +27,7 @@
     </div>
     <Table
       ref="selection"
+      :stripe="stripe"
       :columns="filterColumns"
       :data="data"
       :border="border"
@@ -36,9 +38,9 @@
     <div class="footer">
       <template v-if="batch">
         <Button @click="handleSelectAll(true)" class="margin-sm">全选</Button>
-        <Button @click="handleSelectAll(false)" class="margin-sm"
-          >取消全选</Button
-        >
+        <Button @click="handleSelectAll(false)" class="margin-sm">
+          取消全选
+        </Button>
         <slot name="batch"> </slot>
         <span class="margin-sm">
           共选中
@@ -88,7 +90,8 @@ export default {
     total: {
       type: Number,
       default: 0
-    }
+    },
+    stripe: Boolean
   },
   data() {
     return {
@@ -130,6 +133,13 @@ export default {
     handleSelect(selection) {
       this.selectedData = selection;
       this.$emit("batch", this.selectedData);
+    },
+    exportCsv() {
+      this.$refs.selection.exportCsv({
+        filename: "table",
+        columns: this.filterColumns,
+        data: this.data
+      });
     }
   }
 };
