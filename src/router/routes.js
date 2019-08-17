@@ -104,6 +104,15 @@ export default [
           icon: "jiesuanguanli"
         },
         component: () => import("../views/components/countTo.vue")
+      },
+      {
+        path: "json",
+        name: "json",
+        meta: {
+          label: "JSON",
+          icon: "jiesuanguanli"
+        },
+        component: () => import("../views/components/editorJson.vue")
       }
     ]
   },
@@ -124,6 +133,15 @@ export default [
           icon: "table"
         },
         component: () => import("../views/table/simple.vue")
+      },
+      {
+        path: "endPage",
+        name: "endPage",
+        meta: {
+          label: "后端分页表格",
+          icon: "table"
+        },
+        component: () => import("../views/table/end-page-table.vue")
       }
     ]
   },
