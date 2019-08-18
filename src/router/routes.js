@@ -45,7 +45,7 @@ export default [
       label: "FileReader",
       icon: "wenjian"
     },
-    component: () => import("../views/filereader/FileReader.vue"),
+    component: () => import("../views/filereader/index.vue"),
     children: [
       {
         path: "imagepreview",

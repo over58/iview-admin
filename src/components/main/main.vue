@@ -80,7 +80,9 @@
             overflow: 'auto'
           }"
         >
-          <router-view></router-view>
+          <transition name="slide-fade">
+            <router-view></router-view>
+          </transition>
         </Content>
       </Layout>
     </Layout>
