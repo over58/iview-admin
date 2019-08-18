@@ -174,6 +174,26 @@ export default [
     children: []
   },
   {
+    path: "js",
+    name: "js",
+    meta: {
+      label: "JS",
+      icon: "css"
+    },
+    component: () => import("../views/js/index.vue"),
+    children: [
+      {
+        path: "throttle",
+        name: "throttle",
+        meta: {
+          label: "节流防抖",
+          icon: "css"
+        },
+        component: () => import("../views/js/throttle.vue")
+      }
+    ]
+  },
+  {
     path: "record",
     name: "record",
     meta: {
