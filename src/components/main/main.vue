@@ -147,7 +147,11 @@ export default {
     //   this.$store.commit("setCollapsed", true);
     // },
     selectMenu(name) {
-      this.$router.push({ name });
+      if (name === "github") {
+        window.open("https://github.com/xuyongchaos/iview-admin", "_blank");
+      } else {
+        this.$router.push({ name });
+      }
     },
     handleResize() {
       if (window.innerWidth < 1000) {

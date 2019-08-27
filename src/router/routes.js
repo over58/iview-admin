@@ -177,7 +177,7 @@ export default [
         name: "size",
         meta: {
           label: "尺寸",
-          icon: "css"
+          icon: "size"
         },
         component: () => import("../views/css/size.vue")
       }
@@ -188,7 +188,7 @@ export default [
     name: "js",
     meta: {
       label: "JS",
-      icon: "css"
+      icon: "js"
     },
     component: () => import("../views/js/index.vue"),
     children: [
@@ -197,7 +197,7 @@ export default [
         name: "throttle",
         meta: {
           label: "节流防抖",
-          icon: "css"
+          icon: "hand_throttle"
         },
         component: () => import("../views/js/throttle.vue")
       }
@@ -211,6 +211,44 @@ export default [
       icon: "record"
     },
     component: () => import("../views/Record")
+  },
+  {
+    path: "other",
+    name: "other",
+    meta: {
+      label: "测试",
+      icon: "test"
+    },
+    component: () => import("../views/other"),
+    children: [
+      {
+        path: "hashroute",
+        name: "hashroute",
+        meta: {
+          label: "hash路由",
+          icon: "route"
+        },
+        component: () => import("../views/other/hashroute.vue")
+      },
+      {
+        path: "historyroute",
+        name: "historyroute",
+        meta: {
+          label: "history路由",
+          icon: "route"
+        },
+        component: () => import("../views/other/historyroute.vue")
+      }
+    ]
+  },
+  {
+    path: "github",
+    name: "github",
+    meta: {
+      label: "GitHub",
+      icon: "git"
+    },
+    component: () => import("../views/Home")
   },
   {
     path: "*",
