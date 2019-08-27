@@ -1,6 +1,10 @@
 export default [
   {
-    time: "2019/08/27",
+    time: "2019/08/27 23:00",
+    content: "利用vue-router中hash模式和history模式的原理实现简单的demo"
+  },
+  {
+    time: "2019/08/27 21:00",
     content:
       "添加关于css中常见的尺寸的测试页面，添加测试父组件监听子组件生命周期钩子的一种方式"
   },
