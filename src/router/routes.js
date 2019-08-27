@@ -171,7 +171,17 @@ export default [
       icon: "css"
     },
     component: () => import("../views/css/index.vue"),
-    children: []
+    children: [
+      {
+        path: "size",
+        name: "size",
+        meta: {
+          label: "尺寸",
+          icon: "css"
+        },
+        component: () => import("../views/css/size.vue")
+      }
+    ]
   },
   {
     path: "js",
