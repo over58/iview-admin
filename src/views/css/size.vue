@@ -109,10 +109,8 @@ export default {
     }
   },
   mounted() {
-    console.log(this);
     this.$nextTick(() => {
       this.elem = this.$refs.box;
-      console.log(this.elem);
     });
   }
 };

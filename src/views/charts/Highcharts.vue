@@ -12,7 +12,7 @@
         <chart-pie
           :data="mockData.pie.count"
           title="响应时间分布"
-          ype="spline"
+          type="spline"
         />
       </Col>
     </Row>
@@ -24,6 +24,7 @@
           title="响应时间分布(simple)"
           type="areaspline"
           simple
+          @hook:created="listenChildComCreated"
         />
       </Col>
       <Col :sm="12" :xs="24">
@@ -59,6 +60,12 @@ export default {
     return {
       mockData: mockData
     };
+  },
+  methods: {
+    listenChildComCreated() {
+      console.log("-----测试父组件中监听子组件的生命周期钩子-----");
+      console.log("子组件创建完成");
+    }
   }
 };
 </script>
