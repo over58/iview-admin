@@ -1,5 +1,9 @@
 export default [
   {
+    time: "2019/09/3 22:00",
+    content: "chartLine 支持传提示框格式化参数"
+  },
+  {
     time: "2019/08/27 23:00",
     content: "利用vue-router中hash模式和history模式的原理实现简单的demo"
   },

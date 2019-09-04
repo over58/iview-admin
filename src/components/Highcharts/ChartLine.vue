@@ -30,7 +30,7 @@ import resizeMixin from "mixins/resize";
 
 HighchartsNoData(Highcharts);
 HighchartsExporting(Highcharts);
-
+let vm = null;
 export default {
   name: "ChartItem",
   mixins: [resizeMixin],
@@ -70,6 +70,10 @@ export default {
     notTimeStamp: {
       type: Boolean,
       default: false
+    },
+    tooltipFormat: {
+      type: Function,
+      default: undefined
     }
   },
   data() {
@@ -103,7 +107,13 @@ export default {
         tooltip: {
           xDateFormat: "%Y-%m-%d %H:%M",
           valueDecimals: 2,
-          shared: true
+          shared: true,
+          useHTML: true,
+          formatter: this.tooltipFormat
+            ? function() {
+                return vm.tooltipFormat(this);
+              }
+            : undefined
         },
         xAxis: {
           startOnTick: true,
@@ -231,6 +241,9 @@ export default {
       }
       this.chartInstance = Highcharts.chart(this.$refs.chart, option);
     }
+  },
+  created() {
+    vm = this;
   }
 };
 </script>
