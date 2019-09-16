@@ -51,7 +51,7 @@ export default {
   data() {
     return {
       monitor: null,
-      showChart: true,
+      showChart: false,
       urlConsumeData: []
     };
   },
