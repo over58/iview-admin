@@ -1,11 +1,11 @@
-class Monitor {
+export default class Monitor {
   constructor(timeout = 1000) {
     this.performance = window.performance;
     this.timeout = timeout;
   }
 
   getLoadComsume() {
-    const [{ domComplete }] = performance.getEntriesByType("navigation");
+    const [{ domComplete }] = this.performance.getEntriesByType("navigation");
     return domComplete;
   }
 
@@ -20,16 +20,9 @@ class Monitor {
   }
 
   getTimeoutURL() {
-    console.log(this.performance.getEntriesByType("resource"));
     return performance.getEntriesByType("resource").filter(item => {
       let { startTime, responseEnd } = item;
-      console.log(responseEnd - startTime > this.timeout);
       return responseEnd - startTime >= this.timeout;
     });
   }
 }
-
-var monitor = new Monitor();
-console.log(monitor.getLoadComsume());
-console.log(monitor.geturlConsume());
-console.log(monitor.getTimeoutURL());

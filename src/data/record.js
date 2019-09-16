@@ -1,7 +1,7 @@
 export default [
   {
     time: "2019/09/16 23:00",
-    content: "修复history的bug、添加测试D3的demo"
+    content: "修复history的bug、添加测试D3的demo、添加简单的Home页面性能数据"
   },
   {
     time: "2019/09/3 22:00",
