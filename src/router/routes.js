@@ -44,6 +44,15 @@ export default [
           icon: "Charts"
         },
         component: () => import("../views/charts/d3/bar.vue")
+      },
+      {
+        path: "line-graph",
+        name: "line-graph",
+        meta: {
+          label: "line-graph",
+          icon: "Charts"
+        },
+        component: () => import("../views/charts/line-graph.vue")
       }
     ]
   },
