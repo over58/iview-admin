@@ -97,6 +97,7 @@ export default {
     padding: 0 10px;
     line-height: 20px;
     width: 200px;
+    flex-shrink: 0;
   }
   > p {
     flex: 1;
