@@ -1,5 +1,9 @@
 export default [
   {
+    time: "2019/09/16 23:00",
+    content: "修复history的bug、添加测试D3的demo"
+  },
+  {
     time: "2019/09/3 22:00",
     content: "chartLine 支持传提示框格式化参数"
   },

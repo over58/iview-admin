@@ -35,6 +35,15 @@ export default [
           icon: "Charts"
         },
         component: () => import("../views/charts/Cytoscape.vue")
+      },
+      {
+        path: "d3-bar",
+        name: "d3-bar",
+        meta: {
+          label: "d3-bar",
+          icon: "Charts"
+        },
+        component: () => import("../views/charts/d3/bar.vue")
       }
     ]
   },
