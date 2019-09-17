@@ -1,4 +1,5 @@
 import Vue from "vue";
+import "iview/dist/styles/iview.css";
 import {
   Row,
   Col,
@@ -28,7 +29,12 @@ import {
   TimelineItem,
   Tabs,
   TabPane,
-  Tooltip
+  Tooltip,
+  Alert,
+  Checkbox,
+  CheckboxGroup,
+  RadioGroup,
+  Radio
 } from "iview";
 
 Vue.component("Row", Row);
@@ -59,6 +65,11 @@ Vue.component("TimelineItem", TimelineItem);
 Vue.component("Tabs", Tabs);
 Vue.component("TabPane", TabPane);
 Vue.component("Tooltip", Tooltip);
+Vue.component("Alert", Alert);
+Vue.component("Checkbox", Checkbox);
+Vue.component("CheckboxGroup", CheckboxGroup);
+Vue.component("RadioGroup", RadioGroup);
+Vue.component("Radio", Radio);
 
 Vue.component("Message", Message);
 Vue.component("Notice", Notice);
