@@ -22,6 +22,13 @@ module.exports = {
       .set("libs", resolve("src/libs"))
       .set("api", resolve("src/api"))
       .set("mixins", resolve("src/mixins"));
+
+    // 运行npm run analyze 显示性能分析
+    if (process.env.analyze) {
+      config
+        .plugin("webpack-bundle-analyzer")
+        .use(require("webpack-bundle-analyzer").BundleAnalyzerPlugin);
+    }
   },
   configureWebpack: {
     devtool:
