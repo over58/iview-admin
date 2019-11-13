@@ -9,6 +9,8 @@
     "analyze": "analyze=true vue-cli-service serve"
   },
   "dependencies": {
+    "@antv/data-set": "^0.10.2",
+    "@antv/g2": "^3.5.9",
     "core-js": "^2.6.5",
     "countup": "^1.8.2",
     "cytoscape": "^3.9.0",
