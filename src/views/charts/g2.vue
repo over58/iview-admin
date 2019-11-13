@@ -4,8 +4,8 @@
 
 <script>
 import G2 from "@antv/g2";
-import { DataSet } from "@antv/data-set";
-import tipImage from "./images/tip@2x.png";
+import DataSet from "@antv/data-set";
+import improveImage from "./images/tip@2x.png";
 let vm = null;
 export default {
   props: {

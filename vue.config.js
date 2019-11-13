@@ -1,10 +1,23 @@
 const path = require("path");
+const chalk = require("chalk")
 const resolve = dir => {
   return path.join(__dirname, dir);
 };
 
 const isProduction = process.env.NODE_ENV === "production";
+console.log(chalk.white(`当前环境:${chalk.green(process.env.NODE_ENV)}`))
+
 const publicPath = isProduction ? "/" : "/";
+
+const cdn = [
+  "https://gw.alipayobjects.com/os/antv/pkg/_antv.g2-3.5.1/dist/g2.min.js",
+  "https://gw.alipayobjects.com/os/antv/pkg/_antv.data-set-0.10.1/dist/data-set.min.js"
+]
+const externals = {
+  // 属性名为npm中包名， value为全局暴露出来的名字
+  "@antv/g2": "G2",
+  "@antv/data-set": "DataSet"
+};
 
 module.exports = {
   publicPath: publicPath,
@@ -29,6 +42,13 @@ module.exports = {
       config
         .plugin("webpack-bundle-analyzer")
         .use(require("webpack-bundle-analyzer").BundleAnalyzerPlugin);
+    }
+
+    if(isProduction) {
+      config.plugin('html').tap(args => {
+        args[0].cdn = cdn
+        return args 
+      }).end().externals(externals)
     }
   },
   configureWebpack: {
