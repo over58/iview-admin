@@ -21,6 +21,7 @@
     "iview": "^3.4.2",
     "iview-loader": "^1.2.2",
     "mockjs": "^1.0.1-beta3",
+    "qrcode": "^1.4.4",
     "store": "^2.0.12",
     "tippy.js": "^4.3.5",
     "vue": "^2.6.10",

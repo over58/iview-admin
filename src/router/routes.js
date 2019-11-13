@@ -53,6 +53,15 @@ export default [
           icon: "Charts"
         },
         component: () => import("../views/charts/line-graph.vue")
+      },
+      {
+        path: "g2",
+        name: "g2",
+        meta: {
+          label: "g2",
+          icon: "Charts"
+        },
+        component: () => import("../views/charts/g2.vue")
       }
     ]
   },
@@ -198,6 +207,15 @@ export default [
           icon: "size"
         },
         component: () => import("../views/css/size.vue")
+      },
+      {
+        path: "canvas",
+        name: "canvas",
+        meta: {
+          label: "画布",
+          icon: "canvas"
+        },
+        component: () => import("../views/css/canvas.vue")
       }
     ]
   },
@@ -220,6 +238,15 @@ export default [
         component: () => import("../views/js/throttle.vue")
       }
     ]
+  },
+  {
+    path: "drag",
+    name: "drag",
+    meta: {
+      label: "拖拽",
+      icon: "js"
+    },
+    component: () => import("../views/drag/index.vue")
   },
   {
     path: "record",

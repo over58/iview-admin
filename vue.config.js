@@ -3,7 +3,8 @@ const resolve = dir => {
   return path.join(__dirname, dir);
 };
 
-const publicPath = process.env.NODE_ENV === "production" ? "/" : "/";
+const isProduction = process.env.NODE_ENV === "production";
+const publicPath = isProduction ? "/" : "/";
 
 module.exports = {
   publicPath: publicPath,
