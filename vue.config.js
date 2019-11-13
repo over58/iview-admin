@@ -11,12 +11,16 @@ const publicPath = isProduction ? "/" : "/";
 
 const cdn = [
   "https://gw.alipayobjects.com/os/antv/pkg/_antv.g2-3.5.1/dist/g2.min.js",
-  "https://gw.alipayobjects.com/os/antv/pkg/_antv.data-set-0.10.1/dist/data-set.min.js"
-]
+  "https://gw.alipayobjects.com/os/antv/pkg/_antv.data-set-0.10.1/dist/data-set.min.js",
+  "https://cdn.bootcss.com/echarts/4.4.0-rc.1/echarts-en.common.js",
+  "http://cdn.highcharts.com.cn/highcharts/highcharts.js"
+];
 const externals = {
   // 属性名为npm中包名， value为全局暴露出来的名字
   "@antv/g2": "G2",
-  "@antv/data-set": "DataSet"
+  "@antv/data-set": "DataSet",
+  echarts: "echarts",
+  highcharts: "Highcharts"
 };
 
 module.exports = {
@@ -45,10 +49,16 @@ module.exports = {
     }
 
     if(isProduction) {
-      config.plugin('html').tap(args => {
-        args[0].cdn = cdn
-        return args 
-      }).end().externals(externals)
+      //https://github.com/vuejs/vue-cli/blob/dev/packages/%40vue/cli-service/lib/config/app.js
+      config
+        .plugin("html")
+        .tap(args => {
+          // 往htmlWebpackPlugin.options上挂载变量
+          args[0].cdn = cdn;
+          return args;
+        })
+        .end()
+        .externals(externals);
     }
   },
   configureWebpack: {
