@@ -11,7 +11,7 @@ git.log(function(res) {
     }
   }).filter(item => {
     let msg = item.commit_message.trim();
-    return msg === "test" && msg === "update";
+    return msg !== "test" && msg !== "update";
   })
   fs.writeFileSync(
     path.join(__dirname, "../src/data/record.js"),
