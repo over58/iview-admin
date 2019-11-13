@@ -48,6 +48,7 @@ module.exports = {
         .use(require("webpack-bundle-analyzer").BundleAnalyzerPlugin);
     }
 
+    // 处理生产环境下使用cdn，将部分依赖不打包进bundle
     if(isProduction) {
       //https://github.com/vuejs/vue-cli/blob/dev/packages/%40vue/cli-service/lib/config/app.js
       config
