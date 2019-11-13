@@ -9,6 +9,9 @@ git.log(function(res) {
       commit_message: item[1],
       create_time: item[2]
     }
+  }).filter(item => {
+    let msg = item.commit_message.trim();
+    return msg === "test" && msg === "update";
   })
   fs.writeFileSync(
     path.join(__dirname, "../src/data/record.js"),

@@ -2,8 +2,9 @@
   <div class="container">
     <Timeline>
       <TimelineItem v-for="(item, index) in records" :key="index">
-        <p class="time">{{ item.time }}</p>
-        <p class="content">{{ item.content }}</p>
+        <p class="time">{{ item.create_time }}</p>
+        <p class="content">{{ item.commit_message }}</p>
+        <p class="content"><a :href="'https://github.com/xuyongchaos/iview-admin/commit/'+item.commit_id" target="_blank">{{ item.commit_id }}</a></p>
       </TimelineItem>
     </Timeline>
   </div>
