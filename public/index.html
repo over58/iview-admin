@@ -6,12 +6,37 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>iview-admin</title>
+    <style>
+      html,body,#app{
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .before-load{
+      }
+      .before-load>img.my-loading{
+        height: 50px;
+        width: 50px;
+        display: block;
+        margin: 50px auto;
+      }
+      .before-load > h6{
+        color: rgba(88, 83, 83, 0.8);
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
     <noscript>
-      <strong>We're sorry but iview-admin doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong>很抱歉，如果没有 JavaScript 支持，iview-admin 将不能正常工作。请启用浏览器的 JavaScript 然后继续。</strong>
     </noscript>
-    <div id="app"></div>
+    <div id="app">
+      <div class="before-load">
+        <img class="my-loading" src="./loading.gif" alt="">
+        <h6>正在加载中...</h6>
+        <h6>初次加载资源可能需要较多时间 请耐心等待</h6>
+      </div>
+    </div>
     <!-- built files will be auto injected -->
     <% htmlWebpackPlugin.options.cdn && htmlWebpackPlugin.options.cdn.forEach(cdn =>  {%>
       <script src="<%= cdn%>"></script>
