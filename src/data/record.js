@@ -1,5 +1,13 @@
 export default [
   {
+    time: "2019/11/13",
+    content: "使用externals、预渲染、图片懒加载和图片批量循环显示问题"
+  },
+  {
+    time: "2019/09/17",
+    content: "按需加载优化"
+  },
+  {
     time: "2019/09/16 23:00",
     content: "修复history的bug、添加测试D3的demo、添加简单的Home页面性能数据"
   },
