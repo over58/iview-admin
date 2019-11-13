@@ -244,9 +244,18 @@ export default [
     name: "drag",
     meta: {
       label: "拖拽",
-      icon: "js"
+      icon: "drag"
     },
     component: () => import("../views/drag/index.vue")
+  },
+  {
+    path: "lazyload",
+    name: "lazyload",
+    meta: {
+      label: "图片懒加载",
+      icon: "lazyload"
+    },
+    component: () => import("../views/lazyload")
   },
   {
     path: "record",
