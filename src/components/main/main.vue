@@ -42,15 +42,6 @@
                 :name="second.name"
                 :key="second.name"
               >
-                <Tooltip
-                  v-if="isCollapsed"
-                  :content="second.meta.label"
-                  placement="right-start"
-                  transfer
-                >
-                  <i :class="['iconfont', `icon-${second.meta.icon}`]" />
-                </Tooltip>
-                <i v-else :class="['iconfont', `icon-${second.meta.icon}`]" />
                 <span>{{ second.meta.label }}</span>
               </MenuItem>
             </Submenu>

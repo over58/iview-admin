@@ -56,7 +56,7 @@
           </Form>
         </Card>
       </Col>
-      <Col :xs="12" :sm="12">
+      <Col :xs="24" :sm="24">
         <Card dis-hover title="scroll尺寸">
           <Form label-position="right" :label-width="100" v-if="elem">
             <Form-item label="scrolltWidth">
