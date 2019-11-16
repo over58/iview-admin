@@ -5,7 +5,7 @@
         ref="side1"
         hide-trigger
         collapsible
-        :collapsed-width="50"
+        :collapsed-width="0"
         :value="isCollapsed"
         class="sider"
       >
@@ -141,6 +141,7 @@ export default {
       if (name === "github") {
         window.open("https://github.com/xuyongchaos/iview-admin", "_blank");
       } else {
+        console.log(name)
         this.$router.push({ name });
       }
     },
@@ -199,7 +200,7 @@ export default {
 .menu-item span {
   display: inline-block;
   overflow: hidden;
-  width: 69px;
+  max-width: 150px;
   text-overflow: ellipsis;
   white-space: nowrap;
   vertical-align: bottom;
