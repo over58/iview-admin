@@ -13,8 +13,6 @@ let data = ctx.keys().filter(item => {
   return !blackRecord.includes(key) && dirs.length <= 2;
 })
 
-console.log(data)
-
 // 处理有两层菜单的父级路由和一层的路由
 data.filter(item => {
     let dirs = item.split("/").filter(x => x !== ".");

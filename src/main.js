@@ -3,6 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import "./plugins/index.js";
+import './directives'
 import "iview/dist/styles/iview.css";
 
 import "styles/index.less";
