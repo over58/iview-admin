@@ -1,11 +1,11 @@
 const path = require("path");
-const chalk = require("chalk")
+const chalk = require("chalk");
 const resolve = dir => {
   return path.join(__dirname, dir);
 };
 
 const isProduction = process.env.NODE_ENV === "production";
-console.log(chalk.white(`当前环境:${chalk.green(process.env.NODE_ENV)}`))
+console.log(chalk.white(`当前环境:${chalk.green(process.env.NODE_ENV)}`));
 
 const publicPath = isProduction ? "/" : "/";
 
@@ -41,6 +41,14 @@ module.exports = {
       .set("api", resolve("src/api"))
       .set("mixins", resolve("src/mixins"));
 
+    config.resolve.extensions
+      .clear()
+      .add(".vue")
+      .add(".js")
+      .add(".json");
+    
+    config.resolve.modules.prepend(resolve("node_modules"));
+
     // 运行npm run analyze 显示性能分析
     if (process.env.analyze) {
       config
@@ -49,7 +57,7 @@ module.exports = {
     }
 
     // 处理生产环境下使用cdn，将部分依赖不打包进bundle
-    if(isProduction) {
+    if (isProduction) {
       //https://github.com/vuejs/vue-cli/blob/dev/packages/%40vue/cli-service/lib/config/app.js
       config
         .plugin("html")
