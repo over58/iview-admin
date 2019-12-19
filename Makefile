@@ -3,8 +3,8 @@ Port := 8083
 Repos :=  iview-admin
 restart:
 	git pull origin master
-	cnpm install
-	cnpm run build
+	npm install
+	npm run build
 	docker rm -f ${Repos}
 	docker rmi ${Repos}:latest
 	docker build -t ${Repos}:latest  .
@@ -12,8 +12,8 @@ restart:
 
 start:
 	git pull origin master
-	cnpm install
-	cnpm run build
+	npm install
+	npm run build
 	docker build -t ${Repos}:latest  .
 	docker run -d -p ${Port}:80 --name ${Repos} ${Repos}:latest
 rm:	

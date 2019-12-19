@@ -1,0 +1,13 @@
+.snow-loop(@n) when(@n<=10){
+  @opacity: max(min(0.1 * @n, 1), 0.3);
+  @tx: max(min(1rem * (@n - 1), 5rem), 1rem);
+  @aniName: replace(~'fall-n', 'n', @n);
+  .snow-@{n} {
+    opacity: @opacity;
+    transform: translate(@tx, .4rem) scale(0.1 * @n);
+    animation: @aniName 19s (-13s - @n) linear infinite;
+  }
+
+  .snow-loop(@n+1);
+}
+.snow-loop(1);
