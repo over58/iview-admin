@@ -9,6 +9,8 @@
     "analyze": "analyze=true NODE_ENV=production vue-cli-service serve"
   },
   "dependencies": {
+    "@antv/data-set": "^0.10.2",
+    "@antv/g2": "^3.5.11",
     "countup": "^1.8.2",
     "cytoscape": "^3.9.0",
     "cytoscape-edgehandles": "^3.6.0",
@@ -31,8 +33,6 @@
     "xlsx": "^0.15.1"
   },
   "devDependencies": {
-    "@antv/data-set": "^0.10.2",
-    "@antv/g2": "^3.5.9",
     "@vue/cli-plugin-babel": "^3.10.0",
     "@vue/cli-service": "^3.10.0",
     "babel-eslint": "^10.0.1",
@@ -46,7 +46,8 @@
     "less-loader": "^4.1.0",
     "prettier": "^1.18.2",
     "prettier-eslint-cli": "^5.0.0",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.41.4"
   },
   "gitHooks": {
     "pre-commit": "node ./script/record.js"
