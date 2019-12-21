@@ -3,7 +3,7 @@ Port := 8083
 Repos :=  iview-admin
 restart:
 	git pull origin master
-	npm install
+	yarn install
 	npm run build
 	docker rm -f ${Repos}
 	docker rmi ${Repos}:latest
@@ -12,7 +12,7 @@ restart:
 
 start:
 	git pull origin master
-	npm install
+	yarn install
 	npm run build
 	docker build -t ${Repos}:latest  .
 	docker run -d -p ${Port}:80 --name ${Repos} ${Repos}:latest
