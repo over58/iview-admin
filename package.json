@@ -9,6 +9,8 @@
     "analyze": "analyze=true NODE_ENV=production vue-cli-service serve"
   },
   "dependencies": {
+    "@antv/data-set": "^0.10.2",
+    "@antv/g2": "^3.5.11",
     "countup": "^1.8.2",
     "cytoscape": "^3.9.0",
     "cytoscape-edgehandles": "^3.6.0",
@@ -28,7 +30,7 @@
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1",
     "webpack-bundle-analyzer": "^3.5.0",
-    "xlsx": "^0.15.1"
+    "xlsx": "^0.15.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.10.0",
