@@ -3006,14 +3006,14 @@ cytoscape-edgehandles@^3.6.0:
     lodash.memoize "^4.1.2"
     lodash.throttle "^4.1.1"
 
-cytoscape-popper@^1.0.4:
+cytoscape-popper@^1.0.5:
   version "1.0.5"
   resolved "https://registry.npm.taobao.org/cytoscape-popper/download/cytoscape-popper-1.0.5.tgz#753f026a51b3acce92ca2fb1cf4fceea9b662d74"
   integrity sha1-dT8CalGzrM6Syi+xz0/O6ptmLXQ=
   dependencies:
     popper.js "^1.0.0"
 
-cytoscape@^3.9.0:
+cytoscape@^3.12.1:
   version "3.12.1"
   resolved "https://registry.npm.taobao.org/cytoscape/download/cytoscape-3.12.1.tgz#48fe85481ba7ba4c3b77396426b6b9cc27fe2bb4"
   integrity sha1-SP6FSBunukw7dzlkJra5zCf+K7Q=
