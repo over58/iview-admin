@@ -3,14 +3,18 @@ module.exports = {
   env: {
     node: true
   },
-  extends: [
-    "plugin:vue/essential",
-     "@vue/prettier"
-  ],
+  extends: ["plugin:vue/essential", "@vue/prettier"],
+  globals: {
+    Vue: true
+  },
   rules: {
-    "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
-    "vue/require-v-for-key": "on"
+    "no-console": 0,
+    "no-debugger": 0,
+    "vue/no-use-v-if-with-v-for": 0,
+    "vue/no-v-html": 0,
+    "vue/no-parsing-error": [2, { "x-invalid-end-tag": false }]
+
+
   },
   parserOptions: {
     parser: "babel-eslint"

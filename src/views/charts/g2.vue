@@ -189,14 +189,14 @@ export default {
           }
         });
 
-      let minIndex = -1
-      let min = 150
+      let minIndex = -1;
+      let min = 150;
       this.data.forEach((item, index) => {
         if (min > item.my) {
-          min = item.my
-          minIndex = index
+          min = item.my;
+          minIndex = index;
         }
-      })
+      });
 
       if (minIndex !== -1) {
         chart.guide().image({
@@ -205,29 +205,28 @@ export default {
           offsetY: vm.tipPosition[minIndex].offsetY,
           offsetX: vm.tipPosition[minIndex].offsetX,
           src: improveImage
-        })
+        });
       }
 
       this.data
         .filter(item => !item.my)
         .forEach(i => {
-          if (i.item.includes('发音准确度')) {
+          if (i.item.includes("发音准确度")) {
             chart.guide().html({
               position: [i.item, 100],
               html: `<a style="font-size:12px;color:#32D1FF" href="http://www.baidu.com">跳转链接</a>`,
-              alignX: 'center',
-              alignY: 'bottom',
+              alignX: "center",
+              alignY: "bottom",
               offsetX: 10,
               offsetY: 45,
               forceFit: true
-            })
+            });
           }
-        })
+        });
 
       // 禁止显示提示框
-      chart.tooltip(false)
-      chart.render()
-
+      chart.tooltip(false);
+      chart.render();
     }
   }
 };

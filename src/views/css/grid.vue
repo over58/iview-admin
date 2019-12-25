@@ -10,38 +10,35 @@
     </div>
     <div class="box2">
       <div class="item">
-        <img src="./images/9oZAikiKCiE.jpg" alt="">
+        <img src="./images/9oZAikiKCiE.jpg" alt="" />
       </div>
       <div class="item">
-        <img src="./images/9oZAikiKCiE.jpg" alt="">
+        <img src="./images/9oZAikiKCiE.jpg" alt="" />
       </div>
       <div class="item">
-        <img src="./images/9oZAikiKCiE.jpg" alt="">
+        <img src="./images/9oZAikiKCiE.jpg" alt="" />
       </div>
       <div class="item">
-        <img src="./images/9oZAikiKCiE.jpg" alt="">
+        <img src="./images/9oZAikiKCiE.jpg" alt="" />
       </div>
       <div class="item">
-        <img src="./images/9oZAikiKCiE.jpg" alt="">
+        <img src="./images/9oZAikiKCiE.jpg" alt="" />
       </div>
       <div class="item">
-        <img src="./images/9oZAikiKCiE.jpg" alt="">
+        <img src="./images/9oZAikiKCiE.jpg" alt="" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style lang="less" scoped>
-.container{
-
+.container {
 }
-.box1{
+.box1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 50px 50px;
@@ -49,14 +46,13 @@ export default {
   // grid-row-gap: 10px;
   border: solid 1px royalblue;
 }
-.item{
+.item {
   height: 40px;
   width: 40px;
   border: solid 1px #dfdfdf;
 }
 
-
-.box2{
+.box2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-template-rows: 100px 100px;
@@ -64,7 +60,7 @@ export default {
   grid-row-gap: 10px;
   border: solid 1px royalblue;
 }
-img{
+img {
   width: 100%;
   height: 100%;
   object-fit: cover;
