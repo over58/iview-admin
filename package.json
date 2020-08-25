@@ -19,7 +19,7 @@
     "d3": "^5.14.2",
     "d3-tooltip": "^0.0.1",
     "echarts": "^4.2.1",
-    "highcharts": "^8.0.0",
+    "highcharts": "^8.1.1",
     "iview": "^3.4.2",
     "iview-loader": "^1.2.2",
     "mockjs": "^1.0.1-beta3",
